@@ -1,0 +1,38 @@
+
+#if !(defined(DIAGNOSTIC) || (defined(ERROR) && defined(WARNING) && defined(NOTE)))
+# error Must define either DIAGNOSTIC or the set {ERROR, WARNING, NOTE}
+#endif
+
+#ifndef ERROR
+# define ERROR(DIAGID,TEXT)   \
+ DIAGNOSTIC(Error,DIAGID,TEXT)
+#endif
+
+#ifndef WARNING
+# define WARNING(DIAGID,TEXT) \
+ DIAGNOSTIC(Warning,DIAGID,TEXT)
+#endif
+
+#ifndef NOTE
+# define NOTE(DIAGID,TEXT) \
+ DIAGNOSTIC(Note,DIAGID,TEXT)
+#endif
+
+ERROR(lex_malformed_character, "malformed character \'%0\' found.")
+
+ERROR(lex_extranous_eof, "extranous end-of-file character in file.")
+
+ERROR(lex_unknown_escape_sequence, "unknown escape sequence \'%0\'.")
+
+ERROR(lex_empty_character_constant, "empty character constant")
+
+ERROR(lex_multiple_characters_in_character_literal, "multiple characters found in string literal.")
+
+ERROR(lex_unterminated_character_literal, "unterminated character literal.")
+
+ERROR(lex_unterminated_string_literal, "unterminated string literal.")
+
+#undef NOTE
+#undef WARNING
+#undef ERROR
+#undef DIAGNOSTIC

@@ -1,0 +1,109 @@
+
+
+#ifndef OPERATOR
+# define OPERATOR(name, str)
+#endif
+
+#ifndef KEYWORD
+# define KEYWORD(name, str)
+#endif
+
+#ifndef MISC
+# define MISC(name, str)
+#endif
+
+#ifndef LITERAL
+# define LITERAL(name, str)
+#endif
+
+#ifndef PUNCTUATOR
+# define PUNCTUATOR(name, str)
+#endif
+
+KEYWORD(u8,		"u8")
+KEYWORD(i8,		"i8")
+KEYWORD(u16,	"u16")
+KEYWORD(i16,	"i16")
+KEYWORD(u32,	"u32")
+KEYWORD(i32,	"i32")
+KEYWORD(u64,	"u64")
+KEYWORD(i64,	"i64")
+KEYWORD(u128,   "u128")
+KEYWORD(i128,   "i128")
+KEYWORD(f32,	"f32")
+KEYWORD(f64,	"f64")
+KEYWORD(bool,	"bool")
+
+KEYWORD(let,	"let")
+KEYWORD(fn,		"fn")
+KEYWORD(if,		"if")
+KEYWORD(while,	"while")
+KEYWORD(return, "return")
+
+PUNCTUATOR(l_square,            "[")
+PUNCTUATOR(r_square,            "]")
+PUNCTUATOR(l_paren,             "(")
+PUNCTUATOR(r_paren,             ")")
+PUNCTUATOR(l_brace,             "{")
+PUNCTUATOR(r_brace,             "}")
+PUNCTUATOR(period,              ".")
+PUNCTUATOR(ellipsis,            "...")
+PUNCTUATOR(amp,                 "&")
+PUNCTUATOR(ampamp,              "&&")
+PUNCTUATOR(ampequal,            "&=")
+PUNCTUATOR(star,                "*")
+PUNCTUATOR(starequal,           "*=")
+PUNCTUATOR(plus,                "+")
+PUNCTUATOR(plusplus,            "++")
+PUNCTUATOR(plusequal,           "+=")
+PUNCTUATOR(minus,               "-")
+PUNCTUATOR(arrow,               "->")
+PUNCTUATOR(minusminus,          "--")
+PUNCTUATOR(minusequal,          "-=")
+PUNCTUATOR(tilde,               "~")
+PUNCTUATOR(tildetildegreater,	"~~>")
+PUNCTUATOR(exclaim,             "!")
+PUNCTUATOR(exclaimequal,        "!=")
+PUNCTUATOR(slash,               "/")
+PUNCTUATOR(slashequal,          "/=")
+PUNCTUATOR(percent,             "%")
+PUNCTUATOR(percentequal,        "%=")
+PUNCTUATOR(less,                "<")
+PUNCTUATOR(lessless,            "<<")
+PUNCTUATOR(lessequal,           "<=")
+PUNCTUATOR(lesslessequal,       "<<=")
+PUNCTUATOR(spaceship,           "<=>")
+PUNCTUATOR(greater,             ">")
+PUNCTUATOR(greatergreater,      ">>")
+PUNCTUATOR(greaterequal,        ">=")
+PUNCTUATOR(greatergreaterequal, ">>=")
+PUNCTUATOR(caret,               "^")
+PUNCTUATOR(caretequal,          "^=")
+PUNCTUATOR(pipe,                "|")
+PUNCTUATOR(pipepipe,            "||")
+PUNCTUATOR(pipeequal,           "|=")
+PUNCTUATOR(question,            "?")
+PUNCTUATOR(colon,               ":")
+PUNCTUATOR(semi,                ";")
+PUNCTUATOR(equal,               "=")
+PUNCTUATOR(colonequal,			":=")
+PUNCTUATOR(equalequal,          "==")
+PUNCTUATOR(comma,               ",")
+PUNCTUATOR(hash,                "#")
+PUNCTUATOR(dollar,              "$")
+PUNCTUATOR(at,                  "@")
+
+LITERAL(identifier,				"identifier")
+LITERAL(fp_literal,				"floating literal")
+LITERAL(integer_literal,		"number literal")
+LITERAL(string_literal,         "string literal")
+LITERAL(character_literal,      "character literal")
+
+MISC(new_line,	"line terminator")
+MISC(eof,		"eof")
+
+#undef OPERATOR
+#undef PUNCTUATOR
+#undef LITERAL
+#undef MISC
+#undef KEYWORD
